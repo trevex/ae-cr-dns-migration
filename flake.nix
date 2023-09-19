@@ -23,14 +23,13 @@
             gnumake
             findutils
             tmux
-            google-cloud-sdk
+            go
             (google-cloud-sdk.withExtraComponents [
               pkgs.google-cloud-sdk.components.kubectl
               pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+              pkgs.google-cloud-sdk.components.app-engine-go
             ])
             terraform
-            tfsec
-            tflint
           ];
         };
       }
